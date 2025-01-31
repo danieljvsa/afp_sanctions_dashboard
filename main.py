@@ -90,7 +90,7 @@ def display_summary_statistics(df):
 
     with col2:
         total_fines = df['fines'].sum()
-        st.metric("Total Multas", f"${total_fines:,.2f}")
+        st.metric("Total Multas", f"€{total_fines:,.2f}")
 
     with col3:
         total_suspension_days = df['suspension_days'].sum()
@@ -167,7 +167,7 @@ def main_page(df):
     # Format the numeric columns
     formatted_df = top_10_df.copy()
     formatted_df['Total Multas'] = formatted_df['Total Multas'].map(
-        '${:,.2f}'.format)
+        '€{:,.2f}'.format)
 
     # Calculate required height based on number of rows (approximately 35px per row plus header)
     table_height = (len(formatted_df) * 35) + 40
@@ -199,7 +199,7 @@ def details_page(df):
     # Format the numeric columns
     formatted_df = full_df.copy()
     formatted_df['Total Multas'] = formatted_df['Total Multas'].map(
-        '${:,.2f}'.format)
+        '€{:,.2f}'.format)
 
     # Calculate required height based on number of rows
     table_height = (len(formatted_df) * 35) + 40
