@@ -1,0 +1,1182 @@
+[
+    {
+        "page_id": "186a786c-52e4-8053-8031-da7fd487febc",
+        "sanction_id": "6e980cf1c5064dbfa6aee6ed8c74c3e3",
+        "club_group": "IMPERIAL S.C. SOBREIRENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-80d0-8bf4-c368b8ac75e0",
+        "sanction_id": "5a60e64a352c4e759a155bc7ac6e0147",
+        "club_group": "LEIXÕES SC",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "S19",
+        "fines": 20,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-80a1-83ab-d47ec4a199a4",
+        "sanction_id": "419fced988e446fab4d6a1a3cf60068e",
+        "club_group": "AVS - FUTEBOL SAD",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-80b3-bb05-deb1c9b6c8a0",
+        "sanction_id": "dc26c3d0e39946dd89490db56ea2abb8",
+        "club_group": "ASSOCIAÇÃO GRUPO DESPORTIVO PÓVOA FUTEBOL CLUBE",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-8043-8c4d-efc0b4e2081e",
+        "sanction_id": "d8954f195d9e45a7a8ff5111b7f9fb1b",
+        "club_group": "CLUBE FUTEBOL PEROSINHO",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-80aa-b0a8-e64bd69f384f",
+        "sanction_id": "d1ed8d8e7e95463d8b3dc97f659d6919",
+        "club_group": "S.C. RIO TINTO",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 20,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-8078-9274-f8e48e389dfb",
+        "sanction_id": "ff0031c6c19743bba8da436c1ee4e882",
+        "club_group": "VARZIM SPORT CLUB",
+        "quantity": 1,
+        "suspension_days": 20,
+        "formation": "S17",
+        "fines": 30,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-8053-a335-cbfa4ce20159",
+        "sanction_id": "479d769089bb493b940d98d8fb74207f",
+        "club_group": "SC NUN'ÁLVARES",
+        "quantity": 3,
+        "suspension_days": 50,
+        "formation": "NA",
+        "fines": 150,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-801e-86d9-fccdc49ab7fc",
+        "sanction_id": "d68e5d4865f549b1a6e274f55ff4348c",
+        "club_group": "APARECIDA FUTEBOL CLUBE",
+        "quantity": 2,
+        "suspension_days": 80,
+        "formation": "NA",
+        "fines": 215,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-80d1-aa2d-e57f57ad3263",
+        "sanction_id": "24ffaf315f3648c6bae42320915f43b3",
+        "club_group": "UD BEIRIZ",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "186a786c-52e4-80d2-a1c4-ff2e1b51f65f",
+        "sanction_id": "791a4fbeee6d42c0b5623d7b11954e9f",
+        "club_group": "LEIXÕES SC",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "S15",
+        "fines": 85,
+        "date": "2024-12-01"
+    },
+    {
+        "page_id": "185a786c-52e4-809a-bcbd-e4a134b10ba3",
+        "sanction_id": "45e9900f6ea944c2aa30e72dbd9970e3",
+        "club_group": "LEIXÕES SC",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S11",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-80a8-b9d6-e63050eca860",
+        "sanction_id": "bc69157acc454a5096815a9237bfe843",
+        "club_group": "A.R.D. MACIEIRA",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-801d-aaf7-ce84c651b33d",
+        "sanction_id": "5e09f6ebf58b498e97813bfa7525e421",
+        "club_group": "ASSOCIAÇÃO GRUPO DESPORTIVO PÓVOA FUTEBOL CLUBE",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-80f4-8329-f3748fc1f832",
+        "sanction_id": "38ffccdb45dc4254b0efb244c723372e",
+        "club_group": "ASSOCIAÇÃO DESPORTIVA CULTURAL BALASAR",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8084-a075-cfe6f08ce188",
+        "sanction_id": "7dba0a0bdd0a46b48c1796bfbb4762d6",
+        "club_group": "GULPILHARES F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S11",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8091-bcdb-d4249d2682c6",
+        "sanction_id": "e37a8a31d90c434b9a465d69f2408a58",
+        "club_group": "INTER MILHEIRÓS F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S11",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-807f-8d6b-fe3c5aa6402b",
+        "sanction_id": "5dc9cf73e57d4844a98892de907bd91b",
+        "club_group": "C. C. GERAÇÃO BENFICA MATOSINHOS",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S11",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8099-b4a3-d92241b35727",
+        "sanction_id": "db6a5c29b4174aba83c7af54f140fcc3",
+        "club_group": "APARECIDA FUTEBOL CLUBE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8080-9a80-e753ddf1468f",
+        "sanction_id": "3db6603d5f00429a80c72d55f6c4119c",
+        "club_group": "UD BEIRIZ",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-808c-9164-ea6bbb167f53",
+        "sanction_id": "723e1a85d51446c7a6837806cd0e4d58",
+        "club_group": "VILA FUTEBOL CLUBE",
+        "quantity": 3,
+        "suspension_days": 50,
+        "formation": "NA",
+        "fines": 90,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8029-8cac-ebb27a0044fc",
+        "sanction_id": "66dd2e3a65b8435387ea7f2f536cc868",
+        "club_group": "A.R.D.C. GONDIM MAIA",
+        "quantity": 2,
+        "suspension_days": 120,
+        "formation": "S8",
+        "fines": 110,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-80f2-8c36-dd6aa6b41a6c",
+        "sanction_id": "57ea00c59ebb4a3680f27b10f434ebeb",
+        "club_group": "AMARANTE FC",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-80a9-be69-e72cbe10c3c7",
+        "sanction_id": "6fc47b497e494f2d89d70f94b89ec988",
+        "club_group": "CLUBE DESPORTIVO TROFENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8061-aa6d-dacf4586d320",
+        "sanction_id": "a4959255cc1e45a09ce439654db7a6e7",
+        "club_group": "GRUPO DESPORTIVO ALDEIA NOVA",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "NA",
+        "fines": 85,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8055-a4d9-d763fcc25508",
+        "sanction_id": "55e9c296b8174de19f60aa457688b57d",
+        "club_group": "REBORDOSA A.C.",
+        "quantity": 1,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8098-9da1-eb6658685d7d",
+        "sanction_id": "e24f3f8f0aaf48429b2e1622e882ff2e",
+        "club_group": "FUTEBOL CLUBE PORTO FUTEBOL SAD",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8007-ab8d-d3cebf44813d",
+        "sanction_id": "00cdd89a68864a42802bfba66515addc",
+        "club_group": "SPORT COMÉRCIO E SALGUEIROS",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-805c-92e1-f98eee60494c",
+        "sanction_id": "08c713147df74474835be8322625ce6c",
+        "club_group": "FUTEBOL CLUBE PENAFIEL",
+        "quantity": 2,
+        "suspension_days": 50,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-807c-9b69-d3045ec7eecd",
+        "sanction_id": "ae65d3373920453f82b9b8ca63199c3d",
+        "club_group": "UNIÃO NOGUEIRENSE F.C.",
+        "quantity": 4,
+        "suspension_days": 70,
+        "formation": "NA",
+        "fines": 115,
+        "date": "2024-11-24"
+    },
+    {
+        "page_id": "185a786c-52e4-8065-92f1-ea185a346518",
+        "sanction_id": "2349b862014a41a18e8b0de10ff74257",
+        "club_group": "FUTEBOL CLUBE INFESTA",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-80d8-9b76-dac218c89225",
+        "sanction_id": "ca9e0e31d8f048188c881bd885117460",
+        "club_group": "FOLGOSA DA MAIA FUTEBOL CLUBE",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-807b-a687-f9fdf762f764",
+        "sanction_id": "054609e6c96942a0ac2262c37212ef38",
+        "club_group": "UNIÃO NOGUEIRENSE F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-8037-8028-d0c18b443996",
+        "sanction_id": "6b966a4729b9498b86c4fbc3aef74c3e",
+        "club_group": "CLUBE DESPORTIVO TROFENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-8063-a458-e1118e8fb473",
+        "sanction_id": "5462c057ad5447818e98fda2c2bdce11",
+        "club_group": "S.C. CASTÊLO MAIA",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 25,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-80a1-9b93-eb512870ca06",
+        "sanction_id": "2a8e67863f114ee096e8d90d854b116c",
+        "club_group": "SPORT COMÉRCIO E SALGUEIROS",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-80e6-bf49-f9fb55e09c75",
+        "sanction_id": "03bf5bec64b74545a278fa31c0522a6b",
+        "club_group": "FC TIRSENSE",
+        "quantity": 1,
+        "suspension_days": 90,
+        "formation": "NA",
+        "fines": 50,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-8069-8586-d832cbf43d12",
+        "sanction_id": "c9c7057b30164abba920d81ae30266e0",
+        "club_group": "REBORDOSA A.C.",
+        "quantity": 2,
+        "suspension_days": 35,
+        "formation": "NA",
+        "fines": 90,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-8066-a50e-fd488dff5c97",
+        "sanction_id": "7f13f1134c464ef5895ff56df5f918ee",
+        "club_group": "SPORT CLUBE CANIDELO",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 20,
+        "date": "2024-11-17"
+    },
+    {
+        "page_id": "185a786c-52e4-805f-97b3-fa8f36691cea",
+        "sanction_id": "cfea5fa2b487496083e2f5f181c81bb1",
+        "club_group": "ASSOCIAÇÃO DESPORTIVA MARCO 09",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-80a5-b196-c3110759139d",
+        "sanction_id": "a251451cda064b4a811cd6d7b3f7a6ff",
+        "club_group": "VARZIM SPORT CLUB",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-80c8-a62b-e270afe6b710",
+        "sanction_id": "c48e7e1b0a41440cb684698653f98113",
+        "club_group": "SPG. C. COIMBRÕES",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8061-868a-fbf3f98d0081",
+        "sanction_id": "efd1e843d5f14057ab95dea214384082",
+        "club_group": "CLUBE DESPORTIVO ÁGUIAS DE EIRIZ",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8063-b1dc-e8d1ceb10242",
+        "sanction_id": "112a378b5c6c444dab62f83ca3f90852",
+        "club_group": "ASSOCIAÇÃO CRCDV 1982",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-80c5-a077-e5093657cd5d",
+        "sanction_id": "01ec7bf2b3d14f93a114596d84e156d6",
+        "club_group": "ASSOCIAÇÃO AIRÃES FUTEBOL CLUBE - A.A.F.C.",
+        "quantity": 2,
+        "suspension_days": 105,
+        "formation": "NA",
+        "fines": 70,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8001-ba03-f9eb1c13be53",
+        "sanction_id": "74f6216629e44d78baaf8232518d261d",
+        "club_group": "FUTEBOL CLUBE PORTO FUTEBOL SAD",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-80fd-b833-cb5d29d89df4",
+        "sanction_id": "7ebf5f5cd59242339872717fe40d49db",
+        "club_group": "FUTEBOL CLUBE VILARINHO",
+        "quantity": 3,
+        "suspension_days": 50,
+        "formation": "NA",
+        "fines": 90,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8049-bf3a-f7d2355a209c",
+        "sanction_id": "8562726a285d42aca4f1720bcb1feb5a",
+        "club_group": "GENS SPORT CLUBE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S9",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-80c0-ba12-eaaa31efe54b",
+        "sanction_id": "39e82d7127cb4259bdb0c3fe1de025c4",
+        "club_group": "GRUPO DESPORTIVO ÁGUAS SANTAS",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "S9",
+        "fines": 30,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-809e-a81b-d4769e93831a",
+        "sanction_id": "e259c2ef238741a7928643654cb0a357",
+        "club_group": "SPORT COMÉRCIO E SALGUEIROS",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8017-b9de-f95a2978fd10",
+        "sanction_id": "8201cc8aa58b455ca5265eefb002c4e1",
+        "club_group": "A.R.D.C. GONDIM MAIA",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8019-9cb6-c625a629c3a2",
+        "sanction_id": "54a77f93634d4c3ca8b39773fc4f01e2",
+        "club_group": "ASS VERMELHINHOS VNG",
+        "quantity": 1,
+        "suspension_days": 35,
+        "formation": "S8",
+        "fines": 50,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-8035-983a-d4cd35a362b6",
+        "sanction_id": "00d9948a2469405eb56f905e50311274",
+        "club_group": "UNIÃO DESPORTIVA LAVRENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S8",
+        "fines": 15,
+        "date": "2024-11-10"
+    },
+    {
+        "page_id": "185a786c-52e4-80ad-adb6-eedc670d2e38",
+        "sanction_id": "73e189e43bc94e65af34e69239472903",
+        "club_group": "VARZIM SPORT CLUB",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80fb-8bc9-ea6d00ea39ae",
+        "sanction_id": "fbbfaa4f93f747fc8a4f108f3ba9f00a",
+        "club_group": "S.C. FREAMUNDE",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80b4-a3b1-fdac3c17a0df",
+        "sanction_id": "c0eeb0f210ef4b41b949eab221b513d4",
+        "club_group": "FUTEBOL CLUBE ROMARIZ",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80d6-a51b-dbbde9f279aa",
+        "sanction_id": "e0b822e2eb86491d9713d27fb5fdd4bc",
+        "club_group": "F. C. TERMAS DE SÃO VICENTE 2020",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-805e-8b53-e3bbfed2cf90",
+        "sanction_id": "0492aa46b25746c596518a74c65f74ee",
+        "club_group": "CLUBE RECREATIVO CULTURAL 1º MAIO FIGUEIRÓ",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8048-a675-c15d258a005d",
+        "sanction_id": "ee94f31a35ce412483f837e7bfc29146",
+        "club_group": "C.A.R.O. - A. ESC. FUTEBOL MACIEIRA DA MAIA",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80bc-93cc-e200e1b74862",
+        "sanction_id": "c135fcf0c7cb4ceb9479d8873fb83fb6",
+        "club_group": "A.D.R. S. PEDRO FINS",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80ce-89be-e2e874b1a88e",
+        "sanction_id": "129024b55f7441c9b8d53d3a95942417",
+        "club_group": "UNIÃO NOGUEIRENSE F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80cd-8b07-e6b9f36dc2f4",
+        "sanction_id": "335ca69d9a5e4946a3969f70f1efc593",
+        "club_group": "LEÕES VALBOENSES F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80a9-8ee6-df86e0a46a50",
+        "sanction_id": "b1c2b48ec7d14de7b28fda87245ee6d8",
+        "club_group": "S.C. CASTÊLO MAIA",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-802b-90f7-dbda366998bf",
+        "sanction_id": "a255e79c8716417695d5be05f15e0457",
+        "club_group": "CLUBE FUTEBOL OLIVEIRA DOURO",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-806e-99a6-d6d652c5efac",
+        "sanction_id": "77e58d35f959478695dce04e8e9fe764",
+        "club_group": "GATÕES FUTEBOL CLUBE",
+        "quantity": 2,
+        "suspension_days": 20,
+        "formation": "NA",
+        "fines": 30,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8014-b66d-fdac77d6a3f0",
+        "sanction_id": "fe25216b3114454989dd9e1e0b88dc4c",
+        "club_group": "CLUBE FUTEBOL PEROSINHO",
+        "quantity": 2,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 45,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8034-8a1b-d44bb1c4b002",
+        "sanction_id": "2eacf48f25fd4afa9c41a957adf4304c",
+        "club_group": "SPORT CLUBE SENHORA DA HORA",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8019-8ba7-ced949c27784",
+        "sanction_id": "2af45b29e71e4cd5bd8b9e7b09b98576",
+        "club_group": "SPG. C. COIMBRÕES",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8029-bbd5-ff1ba6da94a5",
+        "sanction_id": "6539d83c1b7b4a5cb920ba5165341d25",
+        "club_group": "S.C. RIO TINTO",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8074-81c7-c165e097b1dd",
+        "sanction_id": "4cd2c652d97841ae8d32016c73407a44",
+        "club_group": "GRUPO DESPORTIVO ALDEIA NOVA",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8096-ab44-fb23332457e9",
+        "sanction_id": "c2465f79441d45d691d77cfc0f77e72d",
+        "club_group": "FC TIRSENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80ac-8bd1-f8fb990fbfbe",
+        "sanction_id": "acf922d76bad4ab79f62188e78b20917",
+        "club_group": "A.C.D. BAIRRO FALCÃO",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 70,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80b2-a448-d1fcea96e70d",
+        "sanction_id": "b875342ac0fd41bebb0c17dea6688f7e",
+        "club_group": "FUTEBOL CLUBE PORTO FUTEBOL SAD",
+        "quantity": 2,
+        "suspension_days": 25,
+        "formation": "NA",
+        "fines": 90,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80f0-a46f-da23aeb84d0d",
+        "sanction_id": "f57b6864d4744870bb23a02ec5641852",
+        "club_group": "F.C. MAIA LIDADOR",
+        "quantity": 2,
+        "suspension_days": 60,
+        "formation": "NA",
+        "fines": 130,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80f3-855a-edd0b1005a1f",
+        "sanction_id": "0564f4f05fe74672811169aa69d5fd56",
+        "club_group": "BOAVISTA FC",
+        "quantity": 3,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 45,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-805a-b18e-fc8c3792a0b0",
+        "sanction_id": "081b04593b644b1e87eb5971a8a0ad01",
+        "club_group": "FUTEBOL CLUBE PENAFIEL",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 25,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8028-ac92-d7d3e2c7aeda",
+        "sanction_id": "33a73c4e97a0461c982c18137f508d07",
+        "club_group": "DESPORTIVO LECA DO BALIO",
+        "quantity": 3,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 45,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80d8-9b2b-d600c8a2da46",
+        "sanction_id": "152e0f7a2a7143f384782ec9055a7d96",
+        "club_group": "FC PEDRAS RUBRAS",
+        "quantity": 2,
+        "suspension_days": 40,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80bb-be72-ef62e952bb92",
+        "sanction_id": "d8f37e8280d345edb7da64c04b9bb40e",
+        "club_group": "GONDOMAR SPORT CLUBE",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-80a1-9361-eec70f860094",
+        "sanction_id": "37ae2f7eb8464120a0dddb2132844491",
+        "club_group": "CUSTÓIAS FUTEBOL CLUBE",
+        "quantity": 4,
+        "suspension_days": 80,
+        "formation": "NA",
+        "fines": 180,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8010-ad2f-cebc0c89695d",
+        "sanction_id": "0717b5f6d12c4ee2a4feda49aea1954c",
+        "club_group": "UNIÃO SC PAREDES",
+        "quantity": 2,
+        "suspension_days": 60,
+        "formation": "NA",
+        "fines": 120,
+        "date": "2024-11-03"
+    },
+    {
+        "page_id": "185a786c-52e4-8082-b1de-c1fc8044a34f",
+        "sanction_id": "e14076f787dd49bb9b22656d3f6803cf",
+        "club_group": "ASSOCIAÇÃO CRCDV 1982",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 75,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-806a-89a8-c11c5ff8ff0d",
+        "sanction_id": "8f7e08a5a1c04b17900bb9479ba546ff",
+        "club_group": "REBORDOSA A.C.",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 120,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-80ba-a50f-f726d1c79782",
+        "sanction_id": "d93f95616a434804a34416ebeef26dba",
+        "club_group": "CLUBE DESPORTIVO TROFENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-8056-8113-fd534fb4ccc4",
+        "sanction_id": "06bffa6a24ed416f84a05928023ed050",
+        "club_group": "UNIÃO SC PAREDES",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-8074-bce7-d99aac1760ae",
+        "sanction_id": "142a80d7ad8646ab8ae9f59da2a263a4",
+        "club_group": "FUTEBOL CLUBE PENAFIEL",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-80e3-ac4c-f34fafde5c35",
+        "sanction_id": "30b5e69aefbe45a8a88ce2df7176e056",
+        "club_group": "ASS VERMELHINHOS VNG",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 20,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-803a-b561-d7c4bc7767c7",
+        "sanction_id": "68c57e3039dc48738241179c07cd7472",
+        "club_group": "AMARANTE FC",
+        "quantity": 2,
+        "suspension_days": 60,
+        "formation": "NA",
+        "fines": 120,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-8051-9637-efbb8ec9f6c8",
+        "sanction_id": "ed253d35ad574752b5c94fdcca110444",
+        "club_group": "GONDOMAR SPORT CLUBE",
+        "quantity": 2,
+        "suspension_days": 25,
+        "formation": "NA",
+        "fines": 35,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-80da-a9ec-d6907d15c56b",
+        "sanction_id": "30807ca5c6984b628c4a7e56b8b5e2ea",
+        "club_group": "SPORT CLUBE CANIDELO",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-20"
+    },
+    {
+        "page_id": "185a786c-52e4-80ba-985a-c3d129f604ac",
+        "sanction_id": "8eab80bc22314da39d32312567cd4c09",
+        "club_group": "CLIP TEAMS - A.D.",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "NA",
+        "fines": 10,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-8091-911a-c73de9ec63a8",
+        "sanction_id": "8519b6bdb11d4179a3d627d406163352",
+        "club_group": "UNIÃO NOGUEIRENSE F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-804a-aeb1-de528b54d315",
+        "sanction_id": "692417a4eb5640b38cf69ebc3408ca86",
+        "club_group": "LEÕES VALBOENSES F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80d5-af7c-c356c6fda9a5",
+        "sanction_id": "55a6a3236fc54736a5ea1e3140e2efc5",
+        "club_group": "GRUPO DESPORTIVO ALDEIA NOVA",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-802f-8fc0-cbb6b06587f6",
+        "sanction_id": "efb0684f341e4dd6a4c59bd80f9d1619",
+        "club_group": "GONDOMAR SPORT CLUBE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80f2-bcfe-e130c776d263",
+        "sanction_id": "7a83940fc5bc438fb1377b9d5178dc72",
+        "club_group": "FUTEBOL CLUBE INFESTA",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80d5-b9d3-e83425f8ec33",
+        "sanction_id": "755b5e8041434802a7798c1df0e3191b",
+        "club_group": "CLUBE DESPORTIVO TROFENSE",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80be-aa86-d18c2a0d791a",
+        "sanction_id": "4fc0d40f164944acaccabaf73153d81a",
+        "club_group": "CLUBE DESPORTIVO ÁGUIAS DE EIRIZ",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-801a-88d6-fbbe147c183c",
+        "sanction_id": "42b31c55c07a4b8aaa8c9d8c013d3017",
+        "club_group": "AVS - FUTEBOL SAD",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-8053-95ae-f08691f7792e",
+        "sanction_id": "278831c690294e0ba727126c6cb5135e",
+        "club_group": "A.C.D. BAIRRO FALCÃO",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-803c-b48e-ee0c944b33c4",
+        "sanction_id": "d831085e019a46aeb6e0a75e222fed1a",
+        "club_group": "UNIÃO SC PAREDES",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80eb-a9d0-fb7bda776654",
+        "sanction_id": "0fd0682af258451e9567d3ea415541dc",
+        "club_group": "SPORT CLUBE SENHORA DA HORA",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80ac-bc82-d3406df9fb68",
+        "sanction_id": "bac528793fde4de3b4d47666a75ebfa6",
+        "club_group": "FC TIRSENSE",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 60,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-8076-84e5-f2363d67e3e8",
+        "sanction_id": "05c593f7e7f34064a4cb624726ae161a",
+        "club_group": "CLUBE DESPORTIVO CANDAL",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 70,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80e4-a1f3-e80fbc7dfb3a",
+        "sanction_id": "65bbc959ec71454a967a804986335c9e",
+        "club_group": "UD BEIRIZ",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "NA",
+        "fines": 15,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-80dd-afad-ec44dd25ff60",
+        "sanction_id": "b2c9c7dee8ed40c18be16355f1a8e7f1",
+        "club_group": "SPORT CLUBE CANIDELO",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "NA",
+        "fines": 70,
+        "date": "2024-10-13"
+    },
+    {
+        "page_id": "185a786c-52e4-8014-8ef6-c30899309b75",
+        "sanction_id": "8b06009f566e471889cb9c9ca0c7fbc7",
+        "club_group": "UD BEIRIZ",
+        "quantity": 1,
+        "suspension_days": 0,
+        "formation": "S19",
+        "fines": 15,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-80fd-bd00-d61b48bd702e",
+        "sanction_id": "d3d75ca156c84910826e6976c8de915d",
+        "club_group": "RIO AVE FC - FUTEBOL SAD",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S15",
+        "fines": 15,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-8088-a0c3-fca7ab0ac93e",
+        "sanction_id": "31a731b1b5e645e394dfcc9c8c524bc1",
+        "club_group": "FUTEBOL CLUBE PENAFIEL",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S17",
+        "fines": 15,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-8038-ade0-c75a93dfdbc9",
+        "sanction_id": "0949a7158fb64736a59fbc646b3a7904",
+        "club_group": "CLUBE FUTEBOL OLIVEIRA DOURO",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S17",
+        "fines": 15,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-808e-a57f-defe7266e38e",
+        "sanction_id": "84d3ed40b4464117a9c5be1f56c21034",
+        "club_group": "ASSOCIAÇÃO DESPORTIVA MARCO 09",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S17",
+        "fines": 15,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-80d0-96f6-da9468925f83",
+        "sanction_id": "f6c2430713ca494f8196b177068e65ac",
+        "club_group": "DESPORTIVO LECA DO BALIO",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "S17",
+        "fines": 60,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-8023-ac1b-c75b0b62ca2d",
+        "sanction_id": "e67e747ad4f2469487facd2800938ec3",
+        "club_group": "ASS VERMELHINHOS VNG",
+        "quantity": 1,
+        "suspension_days": 30,
+        "formation": "S17",
+        "fines": 60,
+        "date": "2024-10-06"
+    },
+    {
+        "page_id": "185a786c-52e4-80d3-b58c-ed7d398046fa",
+        "sanction_id": "fc7214f45d824a76a93aa4ddbea9c601",
+        "club_group": "ATL. C. ALFENENSE",
+        "quantity": 1,
+        "suspension_days": 0,
+        "formation": "S19",
+        "fines": 15,
+        "date": "2024-09-22"
+    },
+    {
+        "page_id": "185a786c-52e4-800c-8555-e30dd31fb246",
+        "sanction_id": "bf5e414240a6468ea17d2f29fb7a39c7",
+        "club_group": "SPORT CLUBE CANIDELO",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S17",
+        "fines": 15,
+        "date": "2024-09-22"
+    },
+    {
+        "page_id": "185a786c-52e4-8053-ae57-f0e4f0202e75",
+        "sanction_id": "b8a1cf9e9afa44a2bbe74268d2bd5689",
+        "club_group": "PADROENSE F.C.",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S15",
+        "fines": 15,
+        "date": "2024-09-22"
+    },
+    {
+        "page_id": "185a786c-52e4-80b9-84d3-c6a2a5b97af2",
+        "sanction_id": "e752582715504e9ebf6c220ecf8751f7",
+        "club_group": "FC PEDRAS RUBRAS",
+        "quantity": 1,
+        "suspension_days": 10,
+        "formation": "S19",
+        "fines": 15,
+        "date": "2024-09-22"
+    },
+    {
+        "page_id": "185a786c-52e4-8010-af09-f9ec0c3c7273",
+        "sanction_id": "f37cb2197b0547cb9524ac3c9c343528",
+        "club_group": "ERMESINDE SPORT CLUBE 1936",
+        "quantity": 1,
+        "suspension_days": 15,
+        "formation": "S19",
+        "fines": 25,
+        "date": "2024-09-22"
+    }
+]
