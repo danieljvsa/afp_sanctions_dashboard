@@ -65,6 +65,8 @@ def load_data(file_path):
 
 # Function to get clubs by sanctions count
 def get_clubs_data(df, limit=None):
+    if df.empty:
+        return df
     data = (df.groupby('club_group').agg({
         'quantity': 'sum',
         'fines': 'sum',
@@ -85,16 +87,25 @@ def display_summary_statistics(df):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        total_sanctions = df['quantity'].sum()
-        st.metric("Total Castigos", f"{total_sanctions:,}")
+        if 'quantity' in df: 
+            total_sanctions = df['quantity'].sum()
+            st.metric("Total Castigos", f"{total_sanctions:,}")
+        else:
+            st.metric("Total Castigos", f"{0:,}")
 
     with col2:
-        total_fines = df['fines'].sum()
-        st.metric("Total Multas", f"${total_fines:,.2f}")
+        if 'fines' in df:
+            total_fines = df['fines'].sum()
+            st.metric("Total Multas", f"{total_fines:,.2f}€")
+        else:
+            st.metric("Total Multas", f"{0:,.2f}€")
 
     with col3:
-        total_suspension_days = df['suspension_days'].sum()
-        st.metric("Total Dias de Suspensão", f"{total_suspension_days:,}")
+        if 'suspension_days' in df:
+            total_suspension_days = df['suspension_days'].sum()
+            st.metric("Total Dias de Suspensão", f"{total_suspension_days:,}")
+        else:
+            st.metric("Total Dias de Suspensão", f"{0:,}")
 
 
 def create_cumulative_sanctions_chart(df, top_10_clubs):
@@ -110,18 +121,15 @@ def create_cumulative_sanctions_chart(df, top_10_clubs):
     cumulative_sanctions = []
 
     for club in top_10_clubs['club_group']:
-        club_data = daily_sanctions[daily_sanctions['club_group'] ==
-                                    club].copy()
-        print("keys...")
-        print(club_data.keys())
+        club_data = daily_sanctions[daily_sanctions['club_group'] == club].copy()
+
         club_data['cumulative_count'] = club_data['quantity'].cumsum()
         cumulative_sanctions.append(club_data)
 
     cumulative_df = pd.concat(cumulative_sanctions)
 
     # Calculate total cumulative sanctions
-    total_daily = (
-        daily_sanctions.groupby('date')['quantity'].sum().reset_index())
+    total_daily = (daily_sanctions.groupby('date')['quantity'].sum().reset_index())
     total_daily['cumulative_count'] = total_daily['quantity'].cumsum()
 
     fig = px.line(cumulative_df,
@@ -130,18 +138,17 @@ def create_cumulative_sanctions_chart(df, top_10_clubs):
                   color='club_group',
                   title='Castigos Acumulados por Clube',
                   labels={
-                      'cumulative_count':
-                      'Número de Castigos Acumulados por Clube',
+                      'cumulative_count': 'Castigos',
                       'date': 'Data',
                       'club_group': 'Clube'
                   })
 
-    fig.add_trace(
-        go.Scatter(x=total_daily['date'],
-                   y=total_daily['cumulative_count'],
-                   name='Total Todos Clubes',
-                   line=dict(color='black', width=3, dash='dash'),
-                   mode='lines'))
+    #fig.add_trace(
+    #    go.Scatter(x=total_daily['date'],
+    #               y=total_daily['cumulative_count'],
+    #               name='Total Todos Clubes',
+    #               line=dict(color='black', width=3, dash='dash'),
+    #               mode='lines'))
 
     fig.update_layout(showlegend=True,
                       legend=dict(yanchor="top",
@@ -157,6 +164,15 @@ def create_cumulative_sanctions_chart(df, top_10_clubs):
 def main_page(df):
     st.title("AF Porto Análise de Castigos")
 
+    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
+    if st.button("Castigos Dirigentes/Treinadores"):
+        st.session_state.page = "main"
+        st.rerun()
+    if st.button("Castigos Público"):
+        st.session_state.page = "page_adepts"
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
+
     # Summary Statistics
     display_summary_statistics(df)
 
@@ -164,42 +180,44 @@ def main_page(df):
     st.subheader("Castigos Dirigentes/Treinadores")
     top_10_df = get_clubs_data(df, limit=10)
 
-    # Format the numeric columns
-    formatted_df = top_10_df.copy()
-    formatted_df['Total Multas'] = formatted_df['Total Multas'].map(
-        '${:,.2f}'.format)
+    if df.empty: 
+        st.write("Sem dados no momento")
+    else: 
+        # Format the numeric columns
+        formatted_df = top_10_df.copy()
+        formatted_df['Total Multas'] = formatted_df['Total Multas'].map('{:,.2f}€'.format)
 
-    # Calculate required height based on number of rows (approximately 35px per row plus header)
-    table_height = (len(formatted_df) * 35) + 40
-    display_dataframe(formatted_df, height=table_height)
+        # Calculate required height based on number of rows (approximately 35px per row plus header)
+        table_height = (len(formatted_df) * 35) + 40
+        display_dataframe(formatted_df, height=table_height)
 
-    # Centered "See More" button
-    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-    if st.button("Ver Mais"):
-        st.session_state.page = "details"
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+        # Centered "See More" button
+        st.markdown('<div class="centered-button">', unsafe_allow_html=True)
+        if st.button("Ver Mais"):
+            st.session_state.page = "details_managers"
+            st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
 
-    # Cumulative Sanctions Graph
-    st.subheader("Castigos ao longo do Tempo")
-    fig = create_cumulative_sanctions_chart(df, top_10_df)
-    st.plotly_chart(fig, use_container_width=True)
+        # Cumulative Sanctions Graph
+        st.subheader("Castigos ao longo do Tempo")
+        fig = create_cumulative_sanctions_chart(df, top_10_df)
+        st.plotly_chart(fig, use_container_width=True)
 
 
-def details_page(df):
+def details_managers_sanctions_page(df):
     st.title("Detalhes Castigos Dirigentes/Treinadores")
 
     # Summary Statistics
     display_summary_statistics(df)
 
     # Full table
-    st.subheader("Tabela Completa de Sanções Dirigentes/Treinadores")
+    st.subheader("Tabela Completa de Castigos Dirigentes/Treinadores")
     full_df = get_clubs_data(df)
 
     # Format the numeric columns
     formatted_df = full_df.copy()
     formatted_df['Total Multas'] = formatted_df['Total Multas'].map(
-        '${:,.2f}'.format)
+        '{:,.2f}€'.format)
 
     # Calculate required height based on number of rows
     table_height = (len(formatted_df) * 35) + 40
@@ -212,6 +230,73 @@ def details_page(df):
         st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
+def adepts_sanctions_page(df):
+    st.title("AF Porto Análise de Castigos")
+
+    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
+    if st.button("Castigos Dirigentes/Treinadores"):
+        st.session_state.page = "main"
+        st.rerun()
+    if st.button("Castigos Público"):
+        st.session_state.page = "page_adepts"
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # Summary Statistics
+    display_summary_statistics(df)
+
+    # Top 10 Clubs Table
+    st.subheader("Castigos ao Público")
+    top_10_df = get_clubs_data(df, limit=10)
+
+
+    if df.empty: 
+        st.write("Sem dados no momento")
+    else: 
+        # Format the numeric columns
+        formatted_df = top_10_df.copy()
+        formatted_df['Total Multas'] = formatted_df['Total Multas'].map('{:,.2f}€'.format)
+        # Calculate required height based on number of rows (approximately 35px per row plus header)
+        table_height = (len(formatted_df) * 35) + 40
+        display_dataframe(formatted_df, height=table_height)
+
+        # Centered "See More" button
+        st.markdown('<div class="centered-button">', unsafe_allow_html=True)
+        if st.button("Ver Mais"):
+            st.session_state.page = "details_adepts"
+            st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        # Cumulative Sanctions Graph
+        st.subheader("Castigos ao longo do Tempo")
+        fig = create_cumulative_sanctions_chart(df, top_10_df)
+        st.plotly_chart(fig, use_container_width=True)
+
+def details_adepts_sanctions_page(df):
+    st.title("Detalhes Castigos Público")
+
+    # Summary Statistics
+    display_summary_statistics(df)
+
+    # Full table
+    st.subheader("Tabela Completa de Castigos Público")
+    full_df = get_clubs_data(df)
+
+    # Format the numeric columns
+    formatted_df = full_df.copy()
+    formatted_df['Total Multas'] = formatted_df['Total Multas'].map(
+        '{:,.2f}€'.format)
+
+    # Calculate required height based on number of rows
+    table_height = (len(formatted_df) * 35) + 40
+    display_dataframe(formatted_df, height=table_height)
+
+    # Centered "Back" button
+    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
+    if st.button("Atrás"):
+        st.session_state.page = "page_adepts"
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
 
 def main():
     # Initialize session state
@@ -223,14 +308,23 @@ def main():
 
     #if uploaded_file is not None:
     # Load data
-    df = pd.read_json("sanctions_managers_db.json")
-    df['date'] = pd.to_datetime(df['date'])
+    df_sanctions_managers = pd.read_json("sanctions_managers_db.json")
+    if 'date'in df_sanctions_managers:
+        df_sanctions_managers['date'] = pd.to_datetime(df_sanctions_managers['date'])
+
+    df_sanctions_adepts = pd.read_json("sanctions_adepts_db.json")
+    if 'date'in df_sanctions_adepts: 
+        df_sanctions_adepts['date'] = pd.to_datetime(df_sanctions_adepts['date'])
 
     # Display appropriate page
     if st.session_state.page == "main":
-        main_page(df)
-    else:
-        details_page(df)
+        main_page(df_sanctions_managers)
+    elif st.session_state.page == "details_managers":
+        details_managers_sanctions_page(df_sanctions_managers)
+    elif st.session_state.page == "page_adepts":
+        adepts_sanctions_page(df_sanctions_adepts)
+    elif st.session_state.page == "details_adepts":
+        details_adepts_sanctions_page(df_sanctions_adepts)
 
 
 if __name__ == "__main__":
