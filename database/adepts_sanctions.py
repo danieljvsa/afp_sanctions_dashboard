@@ -6,7 +6,7 @@ import uuid
 import time
 import datetime
 
-SANCTIONS_ADEPTS_DATABASE = st.secrets('sanctions_adepts_database_id')
+SANCTIONS_ADEPTS_DATABASE = st.secrets['sanctions_adepts_database_id']
 
 def get_sanctions():
     results = get_results(SANCTIONS_ADEPTS_DATABASE)

@@ -14,9 +14,9 @@ st.set_page_config(page_title="Análise de Castigos Clubes", layout="wide")
 @st.cache_data(ttl=60)  # Cache for 1 minute
 def fetch_data_from_api(type):
     """Fetch data from API with caching"""
-    if "adepts_sanctions": 
+    if type == "adepts_sanctions": 
         response = database.adepts_sanctions.get_sanctions()
-    elif "managers_sanctions":
+    elif type == "managers_sanctions":
         response = database.managers_sanctions.get_sanctions()
     else:
         response = {"response": [], "success": False} 
@@ -324,9 +324,11 @@ def main():
     # Load data
     sanctions_managers = fetch_data_from_api("managers_sanctions")
     df_sanctions_managers = pd.DataFrame()
-    if sanctions_managers.success == True:
-        df_sanctions_managers = pd.DataFrame(sanctions_managers)
+    if sanctions_managers['success'] == True:
+        print('Using managers database...')
+        df_sanctions_managers = pd.DataFrame(sanctions_managers['response'])
     else: 
+        print("Using managers json...")
         df_sanctions_managers = pd.read_json("sanctions_managers_db.json")
    
     if 'date' in df_sanctions_managers:
@@ -334,9 +336,11 @@ def main():
 
     sanctions_adepts = fetch_data_from_api("adepts_sanctions")
     df_sanctions_adepts = pd.DataFrame()
-    if sanctions_managers.success == True:
-        df_sanctions_adepts = pd.DataFrame(sanctions_adepts)
+    if sanctions_managers['success'] == True:
+        print('Using adepts database...')
+        df_sanctions_adepts = pd.DataFrame(sanctions_adepts['response'])
     else: 
+        print("Using adepts json...")
         df_sanctions_adepts = pd.read_json("sanctions_adepts_db.json")
     
     if 'date' in df_sanctions_adepts: 

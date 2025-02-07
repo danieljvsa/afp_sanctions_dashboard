@@ -6,11 +6,11 @@ import uuid
 import time
 import datetime
 
-SANCTIONS_MANAGERS_DATABASE = st.secrets('sanctions_managers_database_id')
+SANCTIONS_MANAGERS_DATABASE = st.secrets['sanctions_managers_database_id']
 
 def get_sanctions():
     results = get_results(SANCTIONS_MANAGERS_DATABASE)
-    
+
     if results["success"] == False: 
         return {"response": [], "": False}
 
