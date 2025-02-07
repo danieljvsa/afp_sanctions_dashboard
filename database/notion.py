@@ -1,7 +1,9 @@
 import requests
 from config import parser_config
-TOKEN = parser_config('notion_api_secret')
-NOTION_API_URL = parser_config('notion_api_url')
+import streamlit as st
+
+TOKEN = st.secrets('notion_api_secret')
+NOTION_API_URL = st.secrets('notion_api_url')
 
 headers = {
     "Authorization": "Bearer " + TOKEN, 
@@ -10,6 +12,8 @@ headers = {
 }
 
 def get_results(database_id: str):
+    if not NOTION_API_URL | TOKEN:
+        return {"success": False, "statusCode": 500, "result": None, "error": {}}
     url = NOTION_API_URL + "databases/" + database_id + "/query"
     print(url)
 

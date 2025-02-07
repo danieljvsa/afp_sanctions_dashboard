@@ -4,9 +4,23 @@ import json
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
+import database.adepts_sanctions
+import database.managers_sanctions
 
 # Set page configuration
 st.set_page_config(page_title="Análise de Castigos Clubes", layout="wide")
+
+
+@st.cache_data(ttl=60)  # Cache for 1 minute
+def fetch_data_from_api(type):
+    """Fetch data from API with caching"""
+    if "adepts_sanctions": 
+        response = database.adepts_sanctions.get_sanctions()
+    elif "managers_sanctions":
+        response = database.managers_sanctions.get_sanctions()
+    else:
+        response = {"response": [], "success": False} 
+    return response
 
 # Add custom CSS for centering
 st.markdown("""
@@ -308,12 +322,24 @@ def main():
 
     #if uploaded_file is not None:
     # Load data
-    df_sanctions_managers = pd.read_json("sanctions_managers_db.json")
-    if 'date'in df_sanctions_managers:
+    sanctions_managers = fetch_data_from_api("managers_sanctions")
+    df_sanctions_managers = pd.DataFrame()
+    if sanctions_managers.success == True:
+        df_sanctions_managers = pd.DataFrame(sanctions_managers)
+    else: 
+        df_sanctions_managers = pd.read_json("sanctions_managers_db.json")
+   
+    if 'date' in df_sanctions_managers:
         df_sanctions_managers['date'] = pd.to_datetime(df_sanctions_managers['date'])
 
-    df_sanctions_adepts = pd.read_json("sanctions_adepts_db.json")
-    if 'date'in df_sanctions_adepts: 
+    sanctions_adepts = fetch_data_from_api("adepts_sanctions")
+    df_sanctions_adepts = pd.DataFrame()
+    if sanctions_managers.success == True:
+        df_sanctions_adepts = pd.DataFrame(sanctions_adepts)
+    else: 
+        df_sanctions_adepts = pd.read_json("sanctions_adepts_db.json")
+    
+    if 'date' in df_sanctions_adepts: 
         df_sanctions_adepts['date'] = pd.to_datetime(df_sanctions_adepts['date'])
 
     # Display appropriate page
