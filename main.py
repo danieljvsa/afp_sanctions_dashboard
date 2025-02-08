@@ -10,6 +10,14 @@ import database.managers_sanctions
 # Set page configuration
 st.set_page_config(page_title="Análise de Castigos Clubes", layout="wide")
 
+def initialize_session_state():
+    """Initialize session state variables"""
+    if 'page' not in st.session_state:
+        st.session_state.page = "main"
+    if 'current_view' not in st.session_state:
+        st.session_state.current_view = "Castigos Dirigentes/Treinadores"
+
+initialize_session_state()
 
 @st.cache_data(ttl=60)  # Cache for 1 minute
 def fetch_data_from_api(type):
@@ -22,42 +30,12 @@ def fetch_data_from_api(type):
         response = {"response": [], "success": False} 
     return response
 
-# Add custom CSS for centering
-st.markdown("""
-    <style>
-        .centered-table {
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            max-width: 1000px;
-        }
-        .centered-button {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .stDataFrame {
-            margin: 0 auto;
-        }
-        /* Hide the default scrollbar */
-        .element-container:has(div.stDataFrame) {
-            overflow: visible !important;
-        }
-        div[data-testid="stDataFrame"] > div {
-            max-height: none !important;
-        }
-        div[data-testid="stHorizontalBlock"] {
-            gap: 2rem;
-        }
-    </style>
-""",
-            unsafe_allow_html=True)
-
-
 def display_dataframe(df, height="auto"):
     """Helper function to display DataFrame with custom settings"""
     st.markdown('<div class="centered-table">', unsafe_allow_html=True)
-    st.dataframe(df,
+    col1, centerTable, col3 = st.columns([5.5, 10, 5])
+    with centerTable:
+        centerTable.dataframe(df,
                  column_config={
                      "club_group": "Clube",
                      "quantity": st.column_config.NumberColumn(format="%d"),
@@ -90,31 +68,32 @@ def get_clubs_data(df, limit=None):
             'quantity': 'Total Castigos',
             'fines': 'Total Multas',
             'suspension_days': 'Total Dias de Suspensão'
-        }))
+        }
+    ))
     if limit:
         return data.head(limit)
     return data
 
 
 def display_summary_statistics(df):
-    st.subheader("Estatíticas")
-    col1, col2, col3 = st.columns(3)
+    #st.subheader("Estatíticas")
+    col1, col2, col3, col4, col5 = st.columns([1, 6, 7, 2, 1])
 
-    with col1:
+    with col2:
         if 'quantity' in df: 
             total_sanctions = df['quantity'].sum()
             st.metric("Total Castigos", f"{total_sanctions:,}")
         else:
             st.metric("Total Castigos", f"{0:,}")
 
-    with col2:
+    with col3:
         if 'fines' in df:
             total_fines = df['fines'].sum()
             st.metric("Total Multas", f"{total_fines:,.2f}€")
         else:
             st.metric("Total Multas", f"{0:,.2f}€")
 
-    with col3:
+    with col4:
         if 'suspension_days' in df:
             total_suspension_days = df['suspension_days'].sum()
             st.metric("Total Dias de Suspensão", f"{total_suspension_days:,}")
@@ -176,22 +155,49 @@ def create_cumulative_sanctions_chart(df, top_10_clubs):
 
 
 def main_page(df):
-    st.title("AF Porto Análise de Castigos")
+    st.markdown(
+        """
+        <style>
+        .centered-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        </style>
+        <h1 class="centered-title">AF Porto Análise de Castigos</h1>
+        """,
+        unsafe_allow_html=True
+    )
 
-    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-    if st.button("Castigos Dirigentes/Treinadores"):
-        st.session_state.page = "main"
-        st.rerun()
-    if st.button("Castigos Público"):
-        st.session_state.page = "page_adepts"
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Creating columns to center the buttons
+    col1, center, col3 = st.columns(3)  # The middle column is larger to center content
+    with center:
+        selection = st.selectbox(
+            "Escolha uma opção",  # Label for the select box
+            options=["Castigos Dirigentes/Treinadores", "Castigos Público"],  # List of options
+            index=0 if st.session_state.current_view == "Castigos Dirigentes/Treinadores" else 1,
+            key="navigation"
+        )
 
+        # Action based on the selection
+        if selection != st.session_state.current_view:
+            if selection == "Castigos Dirigentes/Treinadores":
+                st.session_state.page = "main"
+                st.session_state.current_view = "Castigos Dirigentes/Treinadores" 
+                st.rerun()
+
+            elif selection == "Castigos Público":
+                st.session_state.page = "page_adepts"
+                st.session_state.current_view = "Castigos Público"
+                st.rerun()
+        
+    # Top 10 Clubs Table
+    #st.markdown("""<h3 class="centered-title"> Castigos Dirigentes/Treinadores </h3> """, unsafe_allow_html=True)
+    st.subheader("Castigos Dirigentes/Treinadores")
     # Summary Statistics
     display_summary_statistics(df)
 
-    # Top 10 Clubs Table
-    st.subheader("Castigos Dirigentes/Treinadores")
+    #st.subheader("Castigos Dirigentes/Treinadores")
     top_10_df = get_clubs_data(df, limit=10)
 
     if df.empty: 
@@ -206,11 +212,11 @@ def main_page(df):
         display_dataframe(formatted_df, height=table_height)
 
         # Centered "See More" button
-        st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-        if st.button("Ver Mais"):
-            st.session_state.page = "details_managers"
-            st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
+        col1, centerButton, col3 = st.columns([6, 2, 5])
+        with centerButton: 
+            if centerButton.button("Ver Mais"):
+                st.session_state.page = "details_managers"
+                st.rerun()
 
         # Cumulative Sanctions Graph
         st.subheader("Castigos ao longo do Tempo")
@@ -219,48 +225,87 @@ def main_page(df):
 
 
 def details_managers_sanctions_page(df):
-    st.title("Detalhes Castigos Dirigentes/Treinadores")
+    st.markdown(
+        """
+        <style>
+        .centered-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        </style>
+        <h1 class="centered-title">AF Porto Análise de Castigos</h1>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown("""<h3 class="centered-title"> Castigos Dirigentes/Treinadores </h3> """, unsafe_allow_html=True)
 
+    #st.subheader("Tabela Completa de Castigos Dirigentes/Treinadores")
     # Summary Statistics
     display_summary_statistics(df)
 
     # Full table
-    st.subheader("Tabela Completa de Castigos Dirigentes/Treinadores")
     full_df = get_clubs_data(df)
 
     # Format the numeric columns
     formatted_df = full_df.copy()
-    formatted_df['Total Multas'] = formatted_df['Total Multas'].map(
-        '{:,.2f}€'.format)
+    formatted_df['Total Multas'] = formatted_df['Total Multas'].map('{:,.2f}€'.format)
 
     # Calculate required height based on number of rows
     table_height = (len(formatted_df) * 35) + 40
-    display_dataframe(formatted_df, height=table_height)
 
     # Centered "Back" button
-    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-    if st.button("Atrás"):
-        st.session_state.page = "main"
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+    col1, col2, col3, col4, col5 = st.columns([1, 6, 7, 2, 1])
+    with col2: 
+        if col2.button("Voltar"):
+            st.session_state.page = "main"
+            st.rerun()
+
+    display_dataframe(formatted_df, height=table_height)
+
 
 def adepts_sanctions_page(df):
-    st.title("AF Porto Análise de Castigos")
+    st.markdown(
+        """
+        <style>
+        .centered-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        </style>
+        <h1 class="centered-title">AF Porto Análise de Castigos</h1>
+        """,
+        unsafe_allow_html=True
+    )
 
-    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-    if st.button("Castigos Dirigentes/Treinadores"):
-        st.session_state.page = "main"
-        st.rerun()
-    if st.button("Castigos Público"):
-        st.session_state.page = "page_adepts"
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Creating columns to center the buttons
+    col1, center, col3 = st.columns(3)  # The middle column is larger to center content
+    with center:
+        selection = st.selectbox(
+            "Escolha uma opção",  # Label for the select box
+            options=["Castigos Dirigentes/Treinadores", "Castigos Público"],  # List of options
+            index=0 if st.session_state.current_view == "Castigos Dirigentes/Treinadores" else 1,
+            key="navigation"
+        )
 
+        # Action based on the selection
+        if selection != st.session_state.current_view:
+            if selection == "Castigos Dirigentes/Treinadores":
+                st.session_state.page = "main"
+                st.session_state.current_view = "Castigos Dirigentes/Treinadores" 
+                st.rerun()
+
+            elif selection == "Castigos Público":
+                st.session_state.page = "page_adepts"
+                st.session_state.current_view = "Castigos Público"
+                st.rerun()
+
+    st.subheader("Castigos ao Público")
     # Summary Statistics
     display_summary_statistics(df)
 
     # Top 10 Clubs Table
-    st.subheader("Castigos ao Público")
     top_10_df = get_clubs_data(df, limit=10)
 
 
@@ -275,11 +320,11 @@ def adepts_sanctions_page(df):
         display_dataframe(formatted_df, height=table_height)
 
         # Centered "See More" button
-        st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-        if st.button("Ver Mais"):
-            st.session_state.page = "details_adepts"
-            st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
+        col1, centerButton, col3 = st.columns([6, 2, 5])
+        with centerButton: 
+            if centerButton.button("Ver Mais"):
+                st.session_state.page = "details_adepts"
+                st.rerun()
 
         # Cumulative Sanctions Graph
         st.subheader("Castigos ao longo do Tempo")
@@ -287,13 +332,25 @@ def adepts_sanctions_page(df):
         st.plotly_chart(fig, use_container_width=True)
 
 def details_adepts_sanctions_page(df):
-    st.title("Detalhes Castigos Público")
+    st.markdown(
+        """
+        <style>
+        .centered-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        </style>
+        <h1 class="centered-title">AF Porto Análise de Castigos</h1>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown("""<h3 class="centered-title"> Castigos Público </h3> """, unsafe_allow_html=True)
 
     # Summary Statistics
     display_summary_statistics(df)
 
     # Full table
-    st.subheader("Tabela Completa de Castigos Público")
     full_df = get_clubs_data(df)
 
     # Format the numeric columns
@@ -303,14 +360,16 @@ def details_adepts_sanctions_page(df):
 
     # Calculate required height based on number of rows
     table_height = (len(formatted_df) * 35) + 40
+
+    col1, col2, col3, col4, col5 = st.columns([1, 6, 7, 2, 1])
+    with col2: 
+        if col2.button("Voltar"):
+            st.session_state.page = "page_adepts"
+            st.rerun()
+
     display_dataframe(formatted_df, height=table_height)
 
     # Centered "Back" button
-    st.markdown('<div class="centered-button">', unsafe_allow_html=True)
-    if st.button("Atrás"):
-        st.session_state.page = "page_adepts"
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
 
 def main():
     # Initialize session state
