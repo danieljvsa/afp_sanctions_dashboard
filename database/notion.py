@@ -1,5 +1,4 @@
 import requests
-from config import parser_config
 import streamlit as st
 
 TOKEN = st.secrets['notion_api_secret']

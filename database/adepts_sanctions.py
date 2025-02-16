@@ -24,7 +24,6 @@ def get_sanctions():
         sanction_id = row["properties"]['SanctionId']["title"][0]['text']['content'] if len(row["properties"]['SanctionId']["title"]) > 0 else ""
         club_group = row["properties"]['Club Group']["select"]['name']
         quantity = row["properties"]['Quantity']["number"]
-        suspension_days = row["properties"]['Suspension Days']["number"]
         formation = row["properties"]['Formation']["select"]['name']
         fines = row["properties"]['Fines']["number"]
         date = row["properties"]['Date']['date']["start"]
@@ -35,7 +34,6 @@ def get_sanctions():
             "sanction_id": sanction_id,
             "club_group": club_group,
             "quantity": quantity ,
-            "suspension_days": suspension_days ,
             "formation": formation ,
             "fines": fines ,
             "date": date 
