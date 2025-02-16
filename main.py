@@ -6,9 +6,15 @@ import plotly.graph_objects as go
 from datetime import datetime
 import database.adepts_sanctions
 import database.managers_sanctions
+import database.clubs_details
 
 # Set page configuration
 st.set_page_config(page_title="Análise de Castigos Clubes", layout="wide")
+
+data_gps = pd.DataFrame({
+    'latitude': [41.16326520961089],
+    'longitude': [-8.583252689196224]
+})
 
 def initialize_session_state():
     """Initialize session state variables"""
@@ -29,6 +35,8 @@ def fetch_data_from_api(type):
         response = database.adepts_sanctions.get_sanctions()
     elif type == "managers_sanctions":
         response = database.managers_sanctions.get_sanctions()
+    elif type == "clubs_info":
+        response = database.clubs_details.get_clubs_info()
     else:
         response = {"response": [], "success": False} 
     return response
@@ -338,6 +346,67 @@ def display_menu():
                 st.session_state.current_view = "Castigos Público"
                 st.rerun()
 
+def display_club_menu(club_name):
+    col1, center, col3 = st.columns(3)  # The middle column is larger to center content
+    with center:
+        selection = st.selectbox(
+            "Escolha uma opção",  # Label for the select box
+            options=["", "Estatisticas", "Contactos"],  # List of options
+            key="key"
+        )
+        # Action based on the selection
+        if selection != st.session_state.current_view:
+            if selection == "Estatisticas":
+                st.session_state.page = "club_details"
+                st.session_state.current_view = "Estatisticas" 
+                st.session_state.selected_club = club_name
+                st.rerun()
+
+            elif selection == "Contactos":
+                st.session_state.page = "club_contacts"
+                st.session_state.current_view = "Contactos"
+                st.session_state.selected_club = club_name
+                st.rerun()
+
+def club_contacts_page(df_clubs, df_name):
+    club_info = df_clubs[df_clubs['alias'].astype(str).str.strip() == str(df_name).strip()]
+    display_club_menu(df_name)
+    st.markdown(f"""
+        <h1 class="centered-title">{df_name}</h1>
+        """, unsafe_allow_html=True)
+    # Back button at the top
+    col1, col2, col3, col4, col5 = st.columns([1, 6, 7, 2, 1])
+    with col1:
+        if st.button("Voltar"):
+            st.session_state.page = st.session_state.previous_page
+            st.rerun()
+
+    info, map = st.columns(2)
+    with info:
+        if not club_info.empty:
+            labels, image = info.columns(2)
+            with image:
+                image.image(club_info["img_url"].iloc[0], width=200)
+            with labels:
+                labels.subheader("Clube")
+                labels.markdown(f"**{club_info["name"].iloc[0]}**")
+                labels.subheader("Cidade")
+                labels.markdown(f"**{club_info["city"].iloc[0]}**")
+                labels.subheader("AF Porto Website")
+                labels.page_link(page=club_info["url"].iloc[0], label=club_info["url"].iloc[0])
+        else:
+            st.write("Sem dados de contacto.")
+        #info.dataframe(club_info)
+    with map:
+        if "latitude" in club_info and "longitude" in club_info: 
+            gps_data = pd.DataFrame({
+                'latitude': [club_info["latitude"].iloc[0]],
+                'longitude': [club_info["longitude"].iloc[0]]
+            })
+            map.map(data=gps_data, zoom=14)
+        else:
+            map.map(data=data_gps, zoom=15)
+
 def adepts_sanctions_page(df):
     st.markdown(
         """
@@ -427,20 +496,12 @@ def details_adepts_sanctions_page(df):
 
     # Centered "Back" button
 
-def display_club_details(df, club_name):
-    #page contacts
-    
-    # Back button
-    if st.button("Voltar"):
-        st.session_state.page = st.session_state.previous_page
-        st.rerun()
-
 # Add this new function for the club details page
 def display_club_graphs(df_managers, df_adepts, club_name):
+    display_club_menu(club_name)
     st.markdown(f"""
         <h1 class="centered-title">Evolução dos Castigos: {club_name}</h1>
         """, unsafe_allow_html=True)
-    
     
     # Back button at the top
     col1, col2, col3, col4, col5 = st.columns([1, 6, 7, 2, 1])
@@ -597,6 +658,13 @@ def main():
     
     if 'date' in df_sanctions_adepts:
         df_sanctions_adepts['date'] = pd.to_datetime(df_sanctions_adepts['date'])
+
+    clubs_info = fetch_data_from_api("clubs_info")
+    df_clubs_info = pd.DataFrame()
+    if clubs_info['success'] == True:
+        df_clubs_info = pd.DataFrame(clubs_info['response'])
+    else:
+        df_clubs_info = []
     
     # Display appropriate page
     if st.session_state.page == "club_details":
@@ -609,6 +677,8 @@ def main():
         adepts_sanctions_page(df_sanctions_adepts)
     elif st.session_state.page == "details_adepts":
         details_adepts_sanctions_page(df_sanctions_adepts)
+    elif st.session_state.page == "club_contacts":
+        club_contacts_page(df_clubs_info, st.session_state.selected_club)
 
 if __name__ == "__main__":
     main()

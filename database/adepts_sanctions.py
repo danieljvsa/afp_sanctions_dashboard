@@ -1,5 +1,4 @@
 from database.notion import get_results, update_page, create_page
-from config import parser_config
 import streamlit as st
 import json
 import uuid
