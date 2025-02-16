@@ -516,6 +516,7 @@ def display_club_graphs(df_managers, df_adepts, club_name):
     st.subheader("Castigos Dirigentes/Treinadores")
     if not df_managers.empty:  # Changed from not empty to length check
         club_managers = df_managers[df_managers['club_group'].astype(str).str.strip() == str(club_name).strip()]
+        display_summary_statistics(club_managers)
         timeline_managers = club_managers.groupby('date')['quantity'].sum().reset_index()
         timeline_managers = timeline_managers.sort_values('date')
         print(timeline_managers)
